@@ -10,7 +10,7 @@ const projects = [
     {
       title: 'ZenonTech.io',
       description: 'A React Django application with blog posting and user authentication',
-      link: '/project2',
+      link: '/zenontechio',
     },
     // Add more projects as needed
   ];

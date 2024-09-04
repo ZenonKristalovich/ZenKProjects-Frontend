@@ -28,16 +28,20 @@ const ZenonTechIo = () => {
           </section>
 
           <section className="overview-section">
-            <h2>Overview</h2>
+            <h2>Backend</h2>
             <p>
-              The application features a home page that highlights my skills, the programming languages I am proficient in, and the software tools I have experience using. Additionally, there is a projects page where I display a curated list of projects that I am particularly proud of. Each project entry allows you to explore further and gain deeper insights into the work involved.
+              The backend is built with Django and is configured to enforce CSRF token validation for all POST and DELETE requests. It includes robust user authentication to ensure that non-GET requests are only processed if the user is properly logged in. The backend provides functionality for user login, logout, blog creation, deletion, and more, offering a secure environment for managing content.
+            </p>
+            <h2>Frontend</h2>
+            <p>
+            The frontend of my project is built with React and features a homepage that functions as a digital resume. It highlights the programming languages I've worked with, the software I've used, and other key details. The site includes a user-friendly navbar at the top for seamless navigation. There are two pages dedicated to the content I've posted: one for software reviews and another for posts detailing challenges I've faced and how I overcame them. Both pages are equipped with search bars for easy access to specific information. For logged-in admins, there is a dedicated page where they can manage all posts, including the ability to delete them as needed.
             </p>
           </section>
 
           <section className="examples-section">
-            <h2>Examples</h2>
+            <h2>Images</h2>
             <p>
-              As you are currently browsing this website, there is no need for examples; you can explore and experience all the features and projects directly!
+              
             </p>
           </section>
         </div>

@@ -4,6 +4,7 @@ import Navbar from './pages/Navbar';
 import Home from './pages/Home';
 import ProjectsList from './pages/ProjectsList';
 import ZenKProjects from './pages/ZenKProjects';
+import ZenonTechIo from './pages/ZenonTechIo';
 
 const App = () => (
   <Router>
@@ -12,6 +13,7 @@ const App = () => (
       <Route path="/" element={<Home />} />
       <Route path="/projects" element={<ProjectsList />} />
       <Route path="/zenkproject" element={<ZenKProjects />} />
+      <Route path="/zenontechio" element={<ZenonTechIo />} />
     </Routes>
   </Router>
 );
