@@ -44,3 +44,27 @@ li {
 .spacer {
     height: 30px; /* Change the height to your desired gap size */
 }
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap between images */
+  }
+  
+.image-item {
+    max-width: 600px; /* Adjust the max-width as needed */
+    text-align: center;
+  }
+  
+.image-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+  }
+  
+.image-item p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #dbdbdb;
+  }

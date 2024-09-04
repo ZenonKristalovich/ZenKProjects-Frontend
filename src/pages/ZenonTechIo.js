@@ -1,6 +1,11 @@
 import React from 'react';
 import './css/zenkprojects.css';
 
+import loginImage from '../images/login.png';
+import adminImage from '../images/admin.png';
+import postPageImage from '../images/postpage.png';
+import postsImage from '../images/posts.png';
+
 const ZenonTechIo = () => {
   return (
     <div>
@@ -40,9 +45,24 @@ const ZenonTechIo = () => {
 
           <section className="examples-section">
             <h2>Images</h2>
-            <p>
-              
-            </p>
+            <div className="image-container">
+              <div className="image-item">
+                <img src={loginImage} alt="login page of the website" />
+                <p>Image displays the login page of the website</p>
+              </div>
+              <div className="image-item">
+                <img src={adminImage} alt="admin page of website" />
+                <p>Image displays the admin page where control over aspects of the website can be shown</p>
+              </div>
+              <div className="image-item">
+                <img src={postsImage} alt="post search page of website" />
+                <p>Image displays the post search page where a user can search through current posts</p>
+              </div>
+              <div className="image-item">
+                <img src={postPageImage} alt="post page of website" />
+                <p>Image displays the post page where you can read the post from</p>
+              </div>
+            </div>
           </section>
         </div>
       </div>
