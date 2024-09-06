@@ -1,6 +1,8 @@
 import React from 'react';
 import './css/projectslist.css';
 
+import { useNavigate } from 'react-router-dom';
+
 const projects = [
     {
       title: 'ZenKProjects',
@@ -16,6 +18,9 @@ const projects = [
   ];
   
   const ProjectsList = () => {
+
+    const navigate = useNavigate();
+
     return (
       <div className="projects-list">
         <h1>My Projects</h1>
@@ -24,7 +29,7 @@ const projects = [
             <li key={index}>
               <button 
                 className="project-button" 
-                onClick={() => window.location.href = project.link}
+                onClick={() => navigate(project.link)}
               >
                 <h2>{project.title}</h2>
                 <p>{project.description}</p>
