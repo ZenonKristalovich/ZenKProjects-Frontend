@@ -52,16 +52,19 @@ li {
     gap: 20px; /* Adjust the gap between images */
   }
   
-.image-item {
+  .image-item {
     max-width: 600px; /* Adjust the max-width as needed */
-    text-align: center;
-  }
-  
+    margin: 0 auto; /* Center the container itself horizontally */
+    text-align: center; /* Center the text inside */
+}
+
 .image-item img {
+    display: block; /* Make the image a block element */
+    margin: 0 auto; /* Center the image horizontally */
     width: 100%;
     height: auto;
     border-radius: 8px; /* Optional: Add border-radius for rounded corners */
-  }
+}
   
 .image-item p {
     margin-top: 8px;
