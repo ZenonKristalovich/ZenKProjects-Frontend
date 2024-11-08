@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import ProjectsList from './pages/ProjectsList';
 import ZenKProjects from './pages/ZenKProjects';
 import ZenonTechIo from './pages/ZenonTechIo';
+import JavaGames from './pages/JavaGames';
 
 const App = () => (
   <Router>
@@ -14,6 +15,7 @@ const App = () => (
       <Route path="/projects" element={<ProjectsList />} />
       <Route path="/zenkproject" element={<ZenKProjects />} />
       <Route path="/zenontechio" element={<ZenonTechIo />} />
+      <Route path="/javagames" element={<JavaGames />} />
     </Routes>
   </Router>
 );

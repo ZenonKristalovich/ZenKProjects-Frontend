@@ -65,6 +65,6 @@
 
 .project-button:hover {
     transform: scale(1.05); /* Slightly increase size on hover */
-    transition: transform 0.2s ease-in-out; /* Smooth transition */
+    transition: transform 0.4s ease-in-out; /* Smooth transition */
 }
 

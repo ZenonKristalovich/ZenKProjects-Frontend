@@ -14,7 +14,11 @@ const projects = [
       description: 'A React Django application with blog posting and user authentication',
       link: '/zenontechio',
     },
-    // Add more projects as needed
+    {
+      title: 'Java AI Games',
+      description: 'A variety of simple java games, with main focus on AI',
+      link: '/javagames',
+    },
   ];
   
   const ProjectsList = () => {
