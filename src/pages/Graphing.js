@@ -17,7 +17,7 @@ const Graphing = () => {
   return (
     <div>
       <div className="zenkprojects-container">
-        <h1 className="title">ZenonTech.io</h1>
+        <h1 className="title">Graphing Application</h1>
         <div className="content">
           <section className="summary-section">
             <h2>Summary</h2>
