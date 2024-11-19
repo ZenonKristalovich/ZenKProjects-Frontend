@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './css/zenkprojects.css';
 
 import loginImage from '../images/login.png';
@@ -7,6 +7,16 @@ import postPageImage from '../images/postpage.png';
 import postsImage from '../images/posts.png';
 
 const ZenonTechIo = () => {
+
+  // State to track full-screen mode
+  const [isFullScreen, setIsFullScreen] = useState(false);
+  const [currentImage, setCurrentImage] = useState(null); // State to store the current image URL for full screen
+
+  const toggleFullScreen = (image) => {
+    setCurrentImage(image);  // Set the image to display in full screen
+    setIsFullScreen(!isFullScreen);  // Toggle full screen
+  };
+
   return (
     <div>
       <div className="zenkprojects-container">
@@ -47,25 +57,35 @@ const ZenonTechIo = () => {
             <h2>Images</h2>
             <div className="image-container">
               <div className="image-item">
-                <img src={loginImage} alt="login page of the website" />
+                <img src={loginImage} alt="login page of the website" onClick={() => toggleFullScreen(loginImage)}/>
                 <p>Image displays the login page of the website</p>
               </div>
               <div className="image-item">
-                <img src={adminImage} alt="admin page of website" />
+                <img src={adminImage} alt="admin page of website" onClick={() => toggleFullScreen(adminImage)}/>
                 <p>Image displays the admin page where control over aspects of the website can be shown</p>
               </div>
               <div className="image-item">
-                <img src={postsImage} alt="post search page of website" />
+                <img src={postsImage} alt="post search page of website" onClick={() => toggleFullScreen(postsImage)}/>
                 <p>Image displays the post search page where a user can search through current posts</p>
               </div>
               <div className="image-item">
-                <img src={postPageImage} alt="post page of website" />
+                <img src={postPageImage} alt="post page of website" onClick={() => toggleFullScreen(postPageImage)}/>
                 <p>Image displays the post page where you can read the post from</p>
               </div>
             </div>
           </section>
         </div>
       </div>
+
+      {/* Full-screen image modal */}
+      {isFullScreen && (
+        <div className="full-screen-overlay" onClick={() => setIsFullScreen(false)}>
+          <div className="full-screen-container">
+            <img src={currentImage} alt="Full-screen view" />
+          </div>
+        </div>
+      )}
+
       <div className="spacer"></div>
     </div>
   );

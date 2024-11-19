@@ -19,6 +19,11 @@ const projects = [
       description: 'A variety of simple java games, with main focus on AI',
       link: '/javagames',
     },
+    {
+      title: 'Py Graphing Application',
+      description: 'A Python application designed to assist with graphing Data',
+      link: '/graphing',
+    },
   ];
   
   const ProjectsList = () => {

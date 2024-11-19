@@ -71,3 +71,40 @@ li {
     font-size: 14px;
     color: #dbdbdb;
   }
+
+/* Full-screen modal overlay */
+.full-screen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background for better contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer; /* Close when clicking on overlay */
+  }
+  
+  /* Centered container for the image */
+  .full-screen-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%; /* Equal padding around the image */
+    box-sizing: border-box; /* Ensures padding doesn't affect the container size */
+    max-width: 90%; /* Maximum width is 90% of the screen */
+    max-height: 90%; /* Maximum height is 90% of the screen */
+    overflow: hidden; /* Hide overflow to prevent the image from spilling out */
+  }
+  
+  /* Make sure the image scales proportionally */
+  .full-screen-container img {
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+    max-height: 100%; /* Ensure image doesn't exceed container height */
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Maintain aspect ratio while fitting the image within the container */
+  }
+  

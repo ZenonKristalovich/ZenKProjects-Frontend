@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './css/zenkprojects.css';
 
 import antcolonyImage from '../images/antcolonysim.png';
@@ -8,6 +8,15 @@ import icelakeImage from '../images/icelake.png';
 import escapeImage from '../images/escape.png';
 
 const JavaGames = () => {
+  // State to track full-screen mode
+  const [isFullScreen, setIsFullScreen] = useState(false);
+  const [currentImage, setCurrentImage] = useState(null); // State to store the current image URL for full screen
+
+  const toggleFullScreen = (image) => {
+    setCurrentImage(image);  // Set the image to display in full screen
+    setIsFullScreen(!isFullScreen);  // Toggle full screen
+  };
+
   return (
     <div>
       <div className="zenkprojects-container">
@@ -47,7 +56,8 @@ const JavaGames = () => {
                 a hazard: if an ant encounters poison, it dies immediately.
             </p>
             <div className="image-item">
-                <img src={antcolonyImage} alt="Human images represent the Ants" />
+                <img src={antcolonyImage} alt="Human images represent the Ants" onClick={() => toggleFullScreen(antcolonyImage)} />
+                
                 <p>Human images represent the Ants</p>
             </div>
             <p>
@@ -66,7 +76,7 @@ const JavaGames = () => {
             home the game will display the time it took. 
             </p>
             <div className="image-item">
-                <img src={astarImage} alt="Pathing algorithm" />
+                <img src={astarImage} alt="Pathing algorithm" onClick={() => toggleFullScreen(astarImage)} />
                 <p>Red shows tiles already been observed in search algorithm</p>
             </div>
             <p>
@@ -83,7 +93,7 @@ const JavaGames = () => {
             puts 4 chips in the row is the victor. 
             </p>
             <div className="image-item">
-                <img src={connect4Image} alt="Connect 4 Game" />
+                <img src={connect4Image} alt="Connect 4 Game" onClick={() => toggleFullScreen(connect4Image)} />
                 <p>An outcome where the bot wins</p>
             </div>
             <p>
@@ -100,7 +110,7 @@ const JavaGames = () => {
             crumbling ice. 
             </p>
             <div className="image-item">
-                <img src={icelakeImage} alt="Ice Game" />
+                <img src={icelakeImage} alt="Ice Game" onClick={() => toggleFullScreen(icelakeImage)} />
                 <p>Bot avoiding the cracked ice</p>
             </div>
             <p>
@@ -121,7 +131,7 @@ const JavaGames = () => {
             After escaping, the player advances to the next level, which features the same objective
             </p>
             <div className="image-item">
-                <img src={escapeImage} alt="Valley Escape Game" />
+                <img src={escapeImage} alt="Valley Escape Game" onClick={() => toggleFullScreen(escapeImage)} />
                 <p>player being chased by skeletons</p>
             </div>
             <p>
@@ -142,6 +152,16 @@ const JavaGames = () => {
           </section>
         </div>
       </div>
+
+      {/* Full-screen image modal */}
+      {isFullScreen && (
+        <div className="full-screen-overlay" onClick={() => setIsFullScreen(false)}>
+          <div className="full-screen-container">
+            <img src={currentImage} alt="Full-screen view" />
+          </div>
+        </div>
+      )}
+
       <div className="spacer"></div>
     </div>
   );
